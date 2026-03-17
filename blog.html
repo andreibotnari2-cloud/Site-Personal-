@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — Andrei Botnari | Articole Marketing Digital, Google Ads, Meta Ads</title>
+  <meta name="description" content="Articole si ghiduri despre performance marketing, Google Ads, Meta Ads, optimizare campanii publicitare. Invata strategii testate pentru rezultate mai bune.">
+  <meta name="keywords" content="blog marketing digital, articole google ads, ghid meta ads, tutoriale facebook ads, strategii performance marketing, optimizare campanii">
+  <meta name="author" content="Andrei Botnari">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://andreibotnari.md/blog">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Blog — Andrei Botnari | Marketing Digital">
+  <meta property="og:description" content="Articole si ghiduri despre performance marketing, Google Ads si Meta Ads.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ro_MD">
+  <meta property="og:url" content="https://andreibotnari.md/blog">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Blog — Andrei Botnari | Marketing Digital">
+  <meta name="twitter:description" content="Articole si ghiduri despre performance marketing, Google Ads si Meta Ads.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Schema.org Blog -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Blog Andrei Botnari",
+    "description": "Articole despre performance marketing, Google Ads si Meta Ads",
+    "url": "https://andreibotnari.md/blog",
+    "author": {
+      "@type": "Person",
+      "name": "Andrei Botnari",
+      "jobTitle": "Performance Marketing Specialist"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Andrei Botnari"
+    }
+  }
+  </script>
+  
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    :root {
+      --white: #ffffff;
+      --black: #000000;
+      --gray-50: #fafafa;
+      --gray-100: #f5f5f5;
+      --gray-200: #e5e5e5;
+      --gray-300: #d4d4d4;
+      --gray-400: #a3a3a3;
+      --gray-500: #737373;
+      --gray-600: #525252;
+      --gray-700: #404040;
+      --gray-800: #262626;
+      --gray-900: #171717;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--white);
+      color: var(--gray-600);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    /* Container */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    
+    @media (min-width: 768px) {
+      .container { padding: 0 48px; }
+    }
+    
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--gray-100);
+    }
+    
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 72px;
+    }
+    
+    .logo {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: var(--black);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+    
+    .nav-links {
+      display: none;
+      align-items: center;
+      gap: 40px;
+      list-style: none;
+    }
+    
+    @media (min-width: 768px) {
+      .nav-links { display: flex; }
+    }
+    
+    .nav-links a {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--gray-500);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--black);
+    }
+    
+    .nav-cta {
+      display: none;
+      padding: 10px 20px;
+      background: var(--black);
+      color: var(--white);
+      font-size: 0.875rem;
+      font-weight: 500;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.2s;
+    }
+    
+    @media (min-width: 768px) {
+      .nav-cta { display: inline-block; }
+    }
+    
+    .nav-cta:hover {
+      background: var(--gray-800);
+    }
+    
+    /* Mobile Menu */
+    .menu-btn {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+    }
+    
+    @media (min-width: 768px) {
+      .menu-btn { display: none; }
+    }
+    
+    .menu-btn span {
+      width: 20px;
+      height: 2px;
+      background: var(--black);
+      border-radius: 1px;
+      transition: all 0.3s;
+    }
+    
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      top: 72px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: var(--white);
+      z-index: 99;
+      padding: 48px 24px;
+    }
+    
+    .mobile-nav.open { display: block; }
+    
+    .mobile-nav a {
+      display: block;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--black);
+      text-decoration: none;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--gray-100);
+    }
+    
+    /* Page Hero */
+    .page-hero {
+      padding: 160px 0 80px;
+    }
+    
+    @media (min-width: 768px) {
+      .page-hero { padding: 180px 0 100px; }
+    }
+    
+    .page-hero h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      color: var(--black);
+      margin-bottom: 16px;
+    }
+    
+    .page-hero p {
+      font-size: 1.125rem;
+      line-height: 1.7;
+      color: var(--gray-500);
+      max-width: 600px;
+    }
+    
+    /* Blog Grid */
+    .blog-section {
+      padding: 0 0 120px;
+    }
+    
+    @media (min-width: 768px) {
+      .blog-section { padding: 0 0 160px; }
+    }
+    
+    .blog-categories {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 48px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--gray-100);
+    }
+    
+    .category-btn {
+      padding: 10px 20px;
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 100px;
+      font-family: inherit;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--gray-600);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    
+    .category-btn:hover,
+    .category-btn.active {
+      background: var(--black);
+      border-color: var(--black);
+      color: var(--white);
+    }
+    
+    .blog-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+    
+    @media (min-width: 640px) {
+      .blog-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    
+    @media (min-width: 1024px) {
+      .blog-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    
+    /* Article Card */
+    .article-card {
+      display: flex;
+      flex-direction: column;
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: all 0.3s;
+      text-decoration: none;
+    }
+    
+    .article-card:hover {
+      border-color: var(--gray-300);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+      transform: translateY(-4px);
+    }
+    
+    .article-image {
+      aspect-ratio: 16/10;
+      background: var(--gray-100);
+      overflow: hidden;
+    }
+    
+    .article-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s;
+    }
+    
+    .article-card:hover .article-image img {
+      transform: scale(1.05);
+    }
+    
+    .article-content {
+      padding: 24px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    
+    .article-category {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--gray-500);
+    }
+    
+    .article-date {
+      font-size: 0.75rem;
+      color: var(--gray-400);
+    }
+    
+    .article-title {
+      font-size: 1.125rem;
+      font-weight: 600;
+      line-height: 1.4;
+      color: var(--black);
+      margin-bottom: 12px;
+    }
+    
+    .article-excerpt {
+      font-size: 0.9375rem;
+      line-height: 1.6;
+      color: var(--gray-500);
+      margin-bottom: 20px;
+      flex: 1;
+    }
+    
+    .article-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--black);
+      transition: gap 0.2s;
+    }
+    
+    .article-card:hover .article-link {
+      gap: 12px;
+    }
+    
+    /* Featured Article */
+    .featured-article {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      margin-bottom: 64px;
+      padding-bottom: 64px;
+      border-bottom: 1px solid var(--gray-100);
+    }
+    
+    @media (min-width: 900px) {
+      .featured-article { grid-template-columns: 1.2fr 1fr; align-items: center; }
+    }
+    
+    .featured-image {
+      aspect-ratio: 16/10;
+      background: var(--gray-100);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    
+    .featured-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .featured-content {}
+    
+    .featured-badge {
+      display: inline-block;
+      padding: 6px 14px;
+      background: var(--black);
+      border-radius: 100px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+    
+    .featured-title {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 700;
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+      color: var(--black);
+      margin-bottom: 16px;
+    }
+    
+    .featured-excerpt {
+      font-size: 1.0625rem;
+      line-height: 1.7;
+      color: var(--gray-500);
+      margin-bottom: 24px;
+    }
+    
+    .featured-meta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 0.875rem;
+      color: var(--gray-400);
+    }
+    
+    .featured-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      background: var(--black);
+      color: var(--white);
+      font-size: 0.9375rem;
+      font-weight: 500;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.2s;
+    }
+    
+    .featured-link:hover {
+      background: var(--gray-800);
+    }
+    
+    /* Newsletter */
+    .newsletter {
+      background: var(--gray-50);
+      border-radius: 24px;
+      padding: 64px 32px;
+      text-align: center;
+      margin-top: 80px;
+    }
+    
+    @media (min-width: 768px) {
+      .newsletter { padding: 80px 64px; }
+    }
+    
+    .newsletter h2 {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--black);
+      margin-bottom: 12px;
+    }
+    
+    .newsletter p {
+      font-size: 1.0625rem;
+      color: var(--gray-500);
+      margin-bottom: 32px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .newsletter-form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 440px;
+      margin: 0 auto;
+    }
+    
+    @media (min-width: 480px) {
+      .newsletter-form { flex-direction: row; }
+    }
+    
+    .newsletter-input {
+      flex: 1;
+      padding: 14px 20px;
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 0.9375rem;
+      color: var(--black);
+      transition: border-color 0.2s;
+    }
+    
+    .newsletter-input:focus {
+      outline: none;
+      border-color: var(--black);
+    }
+    
+    .newsletter-input::placeholder {
+      color: var(--gray-400);
+    }
+    
+    .newsletter-btn {
+      padding: 14px 28px;
+      background: var(--black);
+      color: var(--white);
+      font-family: inherit;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+    
+    .newsletter-btn:hover {
+      background: var(--gray-800);
+    }
+    
+    /* Footer */
+    footer {
+      padding: 32px 0;
+      border-top: 1px solid var(--gray-100);
+    }
+    
+    .footer-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      text-align: center;
+    }
+    
+    @media (min-width: 768px) {
+      .footer-inner {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+      }
+    }
+    
+    .footer-logo {
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: var(--black);
+    }
+    
+    .footer-copy {
+      font-size: 0.8125rem;
+      color: var(--gray-400);
+    }
+    
+    /* Animations */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo">Andrei Botnari</a>
+      <ul class="nav-links">
+        <li><a href="index.html#rezultate">Rezultate</a></li>
+        <li><a href="index.html#despre">Despre</a></li>
+        <li><a href="index.html#servicii">Servicii</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+      </ul>
+      <a href="index.html#contact" class="nav-cta">Contact</a>
+      <button class="menu-btn" onclick="toggleMenu()" aria-label="Meniu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<nav class="mobile-nav" id="mobileNav">
+  <a href="index.html#rezultate" onclick="toggleMenu()">Rezultate</a>
+  <a href="index.html#despre" onclick="toggleMenu()">Despre</a>
+  <a href="index.html#servicii" onclick="toggleMenu()">Servicii</a>
+  <a href="blog.html" onclick="toggleMenu()">Blog</a>
+  <a href="index.html#contact" onclick="toggleMenu()">Contact</a>
+</nav>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <h1 class="fade-in">Blog</h1>
+      <p class="fade-in">Articole despre performance marketing, strategii testate si ghiduri practice pentru campanii mai eficiente.</p>
+    </div>
+  </section>
+  
+  <section class="blog-section">
+    <div class="container">
+      
+      <!-- Categories -->
+      <div class="blog-categories fade-in">
+        <button class="category-btn active">Toate</button>
+        <button class="category-btn">Google Ads</button>
+        <button class="category-btn">Meta Ads</button>
+        <button class="category-btn">Strategii</button>
+        <button class="category-btn">Case Studies</button>
+      </div>
+      
+      <!-- Featured Article -->
+      <article class="featured-article fade-in">
+        <div class="featured-image">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop" alt="Dashboard analitice cu metrici de performanta" loading="lazy">
+        </div>
+        <div class="featured-content">
+          <span class="featured-badge">Featured</span>
+          <h2 class="featured-title">Cum sa obtii 30x ROAS cu Google Ads in 2024</h2>
+          <p class="featured-excerpt">Ghid complet despre structurarea campaniilor, optimizarea bidding-ului si crearea de ads care convertesc. Strategii testate pe bugete de peste 500k EUR.</p>
+          <a href="#" class="featured-link">
+            Citeste articolul
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </article>
+      
+      <!-- Blog Grid -->
+      <div class="blog-grid">
+        
+        <a href="#" class="article-card fade-in">
+          <div class="article-image">
+            <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=375&fit=crop" alt="Meta Ads Manager interface" loading="lazy">
+          </div>
+          <div class="article-content">
+            <div class="article-meta">
+              <span class="article-category">Meta Ads</span>
+              <span class="article-date">15 Mar 2024</span>
+            </div>
+            <h3 class="article-title">Structura perfecta pentru campanii Meta Ads B2B</h3>
+            <p class="article-excerpt">Cum sa structurezi campaniile pentru lead generation B2B cu costuri sub 5 EUR per lead calificat.</p>
+            <span class="article-link">
+              Citeste
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </a>
+        
+        <a href="#" class="article-card fade-in">
+          <div class="article-image">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=375&fit=crop" alt="Analytics dashboard cu grafice" loading="lazy">
+          </div>
+          <div class="article-content">
+            <div class="article-meta">
+              <span class="article-category">Google Ads</span>
+              <span class="article-date">10 Mar 2024</span>
+            </div>
+            <h3 class="article-title">Performance Max vs Search: Cand sa folosesti fiecare</h3>
+            <p class="article-excerpt">Analiza detaliata a celor doua tipuri de campanii si cand fiecare performa mai bine.</p>
+            <span class="article-link">
+              Citeste
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </a>
+        
+        <a href="#" class="article-card fade-in">
+          <div class="article-image">
+            <img src="https://images.unsplash.com/photo-1553484771-371a605b060b?w=600&h=375&fit=crop" alt="Echipa in meeting de strategie" loading="lazy">
+          </div>
+          <div class="article-content">
+            <div class="article-meta">
+              <span class="article-category">Case Study</span>
+              <span class="article-date">5 Mar 2024</span>
+            </div>
+            <h3 class="article-title">De la 0 la 2M EUR vanzari: Case study e-commerce</h3>
+            <p class="article-excerpt">Cum am scalat un magazin online de la lansare la 2M EUR vanzari in 18 luni.</p>
+            <span class="article-link">
+              Citeste
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </a>
+        
+        <a href="#" class="article-card fade-in">
+          <div class="article-image">
+            <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600&h=375&fit=crop" alt="Laptop cu date de conversie" loading="lazy">
+          </div>
+          <div class="article-content">
+            <div class="article-meta">
+              <span class="article-category">Strategii</span>
+              <span class="article-date">28 Feb 2024</span>
+            </div>
+            <h3 class="article-title">Tracking si atribuire: Setup complet pentru 2024</h3>
+            <p class="article-excerpt">Cum sa configurezi corect tracking-ul intr-o lume fara cookies third-party.</p>
+            <span class="article-link">
+              Citeste
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </a>
+        
+        <a href="#" class="article-card fade-in">
+          <div class="article-image">
+            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&h=375&fit=crop" alt="Strategie de marketing pe whiteboard" loading="lazy">
+          </div>
+          <div class="article-content">
+            <div class="article-meta">
+              <span class="article-category">Google Ads</span>
+              <span class="article-date">20 Feb 2024</span>
+            </div>
+            <h3 class="article-title">Bidding strategies: Manual vs Automated</h3>
+            <p class="article-excerpt">Ghid practic pentru alegerea strategiei de bidding potrivite pentru obiectivele tale.</p>
+            <span class="article-link">
+              Citeste
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </a>
+        
+        <a href="#" class="article-card fade-in">
+          <div class="article-image">
+            <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=600&h=375&fit=crop" alt="Creative ads design pe ecran" loading="lazy">
+          </div>
+          <div class="article-content">
+            <div class="article-meta">
+              <span class="article-category">Meta Ads</span>
+              <span class="article-date">15 Feb 2024</span>
+            </div>
+            <h3 class="article-title">Creative testing framework pentru Meta Ads</h3>
+            <p class="article-excerpt">Sistemul pe care il folosesc pentru a testa si scala creative-uri castigatoare.</p>
+            <span class="article-link">
+              Citeste
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </a>
+        
+      </div>
+      
+      <!-- Newsletter -->
+      <div class="newsletter fade-in">
+        <h2>Primeste articole noi direct in inbox</h2>
+        <p>Strategii si insights despre performance marketing, o data pe saptamana. Fara spam.</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault();">
+          <input type="email" class="newsletter-input" placeholder="Adresa ta de email" required aria-label="Adresa email">
+          <button type="submit" class="newsletter-btn">Aboneaza-te</button>
+        </form>
+      </div>
+      
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <span class="footer-logo">Andrei Botnari</span>
+      <span class="footer-copy">2024 Toate drepturile rezervate</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu toggle
+  function toggleMenu() {
+    document.getElementById('mobileNav').classList.toggle('open');
+  }
+  
+  // Fade in animation
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+  
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  
+  // Category filter (basic implementation)
+  document.querySelectorAll('.category-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>
