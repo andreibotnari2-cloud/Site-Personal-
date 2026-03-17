@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alexandru Ionescu — Marketing Digital</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --white: #ffffff;
+    --off-white: #f8f7f5;
+    --light-gray: #efefed;
+    --mid-gray: #9a9a96;
+    --dark-gray: #3a3a38;
+    --black: #111110;
+    --accent: #111110;
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-body: 'DM Sans', system-ui, sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--white);
+    color: var(--dark-gray);
+    font-size: 15px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 6vw;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+  }
+
+  .nav-logo {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--black);
+    text-decoration: none;
+    letter-spacing: 0.01em;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: var(--mid-gray);
+    font-size: 0.82rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 400;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--black); }
+
+  .nav-cta {
+    background: var(--black);
+    color: var(--white) !important;
+    padding: 0.5rem 1.2rem;
+    border-radius: 2px;
+  }
+
+  .nav-cta:hover { background: var(--dark-gray); color: var(--white) !important; }
+
+  /* BURGER */
+  .burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+  .burger span { width: 22px; height: 1.5px; background: var(--black); transition: all 0.3s; display: block; }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 0 6vw;
+    padding-top: 80px;
+    gap: 4rem;
+    background: var(--white);
+  }
+
+  .hero-text {}
+
+  .hero-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--mid-gray);
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--light-gray);
+    padding-bottom: 0.5rem;
+  }
+
+  .hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 5vw, 5.5rem);
+    font-weight: 300;
+    line-height: 1.05;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    font-weight: 300;
+  }
+
+  .hero-sub {
+    font-size: 1rem;
+    color: var(--mid-gray);
+    max-width: 400px;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .btn-primary {
+    background: var(--black);
+    color: var(--white);
+    padding: 0.9rem 2rem;
+    text-decoration: none;
+    font-size: 0.82rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: all 0.2s;
+    border: 1px solid var(--black);
+  }
+
+  .btn-primary:hover { background: var(--dark-gray); }
+
+  .btn-secondary {
+    color: var(--black);
+    padding: 0.9rem 2rem;
+    text-decoration: none;
+    font-size: 0.82rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border: 1px solid var(--light-gray);
+    transition: all 0.2s;
+  }
+
+  .btn-secondary:hover { border-color: var(--dark-gray); }
+
+  .hero-visual {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-img-wrap {
+    width: 100%;
+    max-width: 440px;
+    aspect-ratio: 3/4;
+    background: var(--off-white);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-img-wrap::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #f0ede8 0%, #e8e4de 100%);
+  }
+
+  .hero-placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--mid-gray);
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    gap: 0.5rem;
+  }
+
+  .placeholder-icon {
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--mid-gray);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+  }
+
+  .hero-stat-row {
+    display: flex;
+    gap: 2rem;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--light-gray);
+  }
+
+  .stat { }
+  .stat-num {
+    font-family: var(--font-display);
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: var(--black);
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 0.75rem;
+    color: var(--mid-gray);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-top: 0.3rem;
+  }
+
+  /* SECTION BASE */
+  section { padding: 7rem 6vw; }
+
+  .section-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--mid-gray);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .section-label::before {
+    content: '';
+    width: 24px;
+    height: 1px;
+    background: var(--mid-gray);
+    display: inline-block;
+  }
+
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 3.5vw, 3.2rem);
+    font-weight: 300;
+    color: var(--black);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+
+  /* DESPRE MINE */
+  #despre {
+    background: var(--off-white);
+  }
+
+  .despre-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 6rem;
+    align-items: start;
+    margin-top: 4rem;
+  }
+
+  .despre-img {
+    aspect-ratio: 4/5;
+    background: var(--light-gray);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .despre-img::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 40%;
+    background: linear-gradient(to top, rgba(0,0,0,0.08), transparent);
+  }
+
+  .despre-content {}
+
+  .despre-bio {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: var(--dark-gray);
+    margin-bottom: 2rem;
+  }
+
+  .despre-bio strong {
+    font-weight: 500;
+    color: var(--black);
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--light-gray);
+    border: 1px solid var(--light-gray);
+    margin-top: 2.5rem;
+  }
+
+  .skill-item {
+    background: var(--off-white);
+    padding: 1rem 1.2rem;
+    font-size: 0.82rem;
+    color: var(--dark-gray);
+    letter-spacing: 0.02em;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .skill-dot {
+    width: 5px;
+    height: 5px;
+    background: var(--black);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* SERVICII */
+  #servicii { background: var(--white); }
+
+  .servicii-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 4rem;
+  }
+
+  .servicii-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .serviciu-card {
+    border: 1px solid var(--light-gray);
+    padding: 2.5rem 2rem;
+    transition: all 0.25s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .serviciu-card::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--black);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+
+  .serviciu-card:hover::before { transform: scaleX(1); }
+  .serviciu-card:hover { border-color: rgba(0,0,0,0.2); }
+
+  .serviciu-num {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--light-gray);
+    line-height: 1;
+    margin-bottom: 1.5rem;
+  }
+
+  .serviciu-title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--black);
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.01em;
+  }
+
+  .serviciu-desc {
+    font-size: 0.85rem;
+    color: var(--mid-gray);
+    line-height: 1.7;
+  }
+
+  /* PORTOFOLIU */
+  #portofoliu { background: var(--off-white); }
+
+  .portofoliu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 4rem;
+  }
+
+  .proiect-card {
+    background: var(--white);
+    overflow: hidden;
+    border: 1px solid var(--light-gray);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .proiect-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+  }
+
+  .proiect-img {
+    aspect-ratio: 16/9;
+    background: var(--light-gray);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .proiect-img-bg {
+    position: absolute;
+    inset: 0;
+  }
+
+  .proiect-tag {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--white);
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.7rem;
+    color: var(--dark-gray);
+  }
+
+  .proiect-content { padding: 1.8rem 2rem; }
+
+  .proiect-client {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--mid-gray);
+    margin-bottom: 0.5rem;
+  }
+
+  .proiect-title {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--black);
+    margin-bottom: 0.8rem;
+    line-height: 1.2;
+  }
+
+  .proiect-result {
+    font-size: 0.82rem;
+    color: var(--mid-gray);
+  }
+
+  .proiect-result strong {
+    color: var(--black);
+    font-weight: 500;
+  }
+
+  /* TESTIMONIALE */
+  #testimoniale { background: var(--black); }
+
+  #testimoniale .section-label { color: rgba(255,255,255,0.4); }
+  #testimoniale .section-label::before { background: rgba(255,255,255,0.3); }
+  #testimoniale .section-title { color: var(--white); }
+
+  .testimoniale-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 4rem;
+  }
+
+  .testimonial-card {
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 2.5rem 2rem;
+    transition: border-color 0.2s;
+  }
+
+  .testimonial-card:hover { border-color: rgba(255,255,255,0.25); }
+
+  .testimonial-quote {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 300;
+    font-style: italic;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .author-avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 0.05em;
+    flex-shrink: 0;
+  }
+
+  .author-name {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--white);
+  }
+
+  .author-role {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.4);
+  }
+
+  /* BLOG */
+  #blog { background: var(--white); }
+
+  .blog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 4rem;
+  }
+
+  .blog-link-all {
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--mid-gray);
+    text-decoration: none;
+    border-bottom: 1px solid var(--light-gray);
+    padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .blog-link-all:hover { color: var(--black); border-color: var(--black); }
+
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+
+  .post-card {}
+
+  .post-img {
+    aspect-ratio: 16/9;
+    background: var(--off-white);
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .post-img-inner {
+    position: absolute;
+    inset: 0;
+    transition: transform 0.4s ease;
+  }
+
+  .post-card:hover .post-img-inner { transform: scale(1.03); }
+
+  .post-meta {
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--mid-gray);
+    margin-bottom: 0.6rem;
+    display: flex;
+    gap: 1rem;
+  }
+
+  .post-title {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--black);
+    line-height: 1.3;
+    margin-bottom: 0.7rem;
+    text-decoration: none;
+    display: block;
+    transition: color 0.2s;
+  }
+
+  .post-title:hover { color: var(--mid-gray); }
+
+  .post-excerpt {
+    font-size: 0.82rem;
+    color: var(--mid-gray);
+    line-height: 1.7;
+  }
+
+  /* CONTACT */
+  #contact { background: var(--off-white); }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8rem;
+    align-items: start;
+    margin-top: 4rem;
+  }
+
+  .contact-info {}
+
+  .contact-desc {
+    font-size: 1rem;
+    color: var(--mid-gray);
+    line-height: 1.8;
+    margin-bottom: 3rem;
+    max-width: 380px;
+  }
+
+  .contact-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--light-gray);
+  }
+
+  .contact-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--mid-gray);
+    margin-bottom: 0.3rem;
+  }
+
+  .contact-value {
+    font-size: 0.95rem;
+    color: var(--black);
+    font-weight: 400;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .contact-value:hover { color: var(--mid-gray); }
+
+  .contact-form {}
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .form-group {
+    margin-bottom: 1.2rem;
+  }
+
+  .form-group label {
+    display: block;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--mid-gray);
+    margin-bottom: 0.5rem;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border: 1px solid var(--light-gray);
+    background: var(--white);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--black);
+    outline: none;
+    transition: border-color 0.2s;
+    -webkit-appearance: none;
+    border-radius: 0;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus,
+  .form-group select:focus { border-color: var(--dark-gray); }
+
+  .form-group textarea { min-height: 120px; resize: vertical; }
+
+  .form-submit {
+    width: 100%;
+    background: var(--black);
+    color: var(--white);
+    border: none;
+    padding: 1rem;
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .form-submit:hover { background: var(--dark-gray); }
+
+  /* FOOTER */
+  footer {
+    background: var(--black);
+    padding: 4rem 6vw 2.5rem;
+    color: rgba(255,255,255,0.4);
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    margin-bottom: 2rem;
+  }
+
+  .footer-logo {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    color: var(--white);
+    font-weight: 300;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .footer-links a {
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: rgba(255,255,255,0.8); }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    letter-spacing: 0.03em;
+  }
+
+  /* SCROLL REVEAL */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* MOBILE NAV */
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 64px; left: 0; right: 0; bottom: 0;
+    background: var(--white);
+    z-index: 99;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+  }
+
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a { font-size: 1.5rem; font-family: var(--font-display); color: var(--black); text-decoration: none; }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 100px; padding-bottom: 4rem; }
+    .hero-visual { display: none; }
+    .despre-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .servicii-grid { grid-template-columns: 1fr; }
+    .portofoliu-grid { grid-template-columns: 1fr; }
+    .testimoniale-grid { grid-template-columns: 1fr; }
+    .blog-grid { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .nav-links { display: none; }
+    .burger { display: flex; }
+    .servicii-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+    .blog-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+    .footer-top { flex-direction: column; gap: 2rem; }
+    .footer-bottom { flex-direction: column; gap: 0.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Alexandru Ionescu</a>
+  <ul class="nav-links">
+    <li><a href="#despre">Despre</a></li>
+    <li><a href="#servicii">Servicii</a></li>
+    <li><a href="#portofoliu">Portofoliu</a></li>
+    <li><a href="#blog">Blog</a></li>
+    <li><a href="#contact" class="nav-cta">Contact</a></li>
+  </ul>
+  <div class="burger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#despre" onclick="toggleMenu()">Despre</a>
+  <a href="#servicii" onclick="toggleMenu()">Servicii</a>
+  <a href="#portofoliu" onclick="toggleMenu()">Portofoliu</a>
+  <a href="#blog" onclick="toggleMenu()">Blog</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <span class="hero-tag">Specialist Marketing Digital</span>
+    <h1>Rezultate<br><em>măsurabile</em><br>prin date.</h1>
+    <p class="hero-sub">Google Ads, Meta Ads, DV360 și YouTube — campanii construite pe strategie, optimizate pentru creștere.</p>
+    <div class="hero-actions">
+      <a href="#servicii" class="btn-primary">Descoperă serviciile</a>
+      <a href="#contact" class="btn-secondary">Hai să vorbim</a>
+    </div>
+    <div class="hero-stat-row">
+      <div class="stat">
+        <div class="stat-num">120+</div>
+        <div class="stat-label">Campanii gestionate</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">€3M+</div>
+        <div class="stat-label">Buget administrat</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">7 ani</div>
+        <div class="stat-label">Experiență</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-img-wrap">
+      <div class="hero-placeholder">
+        <div class="placeholder-icon">✦</div>
+        <span>Fotografia ta</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DESPRE -->
+<section id="despre">
+  <div class="section-label">Despre mine</div>
+  <h2 class="section-title">Strateg digital cu<br>viziune de business.</h2>
+  <div class="despre-grid">
+    <div class="despre-img reveal">
+      <div class="hero-placeholder" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#9a9a96;font-size:0.78rem;letter-spacing:0.05em;text-transform:uppercase;gap:0.5rem;">
+        <div style="width:44px;height:44px;border:1px solid #9a9a96;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.4rem;">✦</div>
+        <span>Fotografia ta</span>
+      </div>
+    </div>
+    <div class="despre-content reveal">
+      <p class="despre-bio">
+        Cu <strong>7 ani de experiență</strong> în marketing digital, am lucrat cu branduri locale și internaționale, ajutând companiile să transforme bugetele publicitare în creștere reală și măsurabilă.
+      </p>
+      <p class="despre-bio">
+        Specializat în <strong>ecosistemul Google</strong> (Search, Display, YouTube, DV360) și <strong>Meta Ads</strong>, construiesc campanii care nu arată bine doar în rapoarte — ci aduc clienți, lead-uri și vânzări.
+      </p>
+      <p class="despre-bio">
+        Abordarea mea combină <strong>analiza datelor</strong> cu înțelegerea psihologiei consumatorului, pentru mesaje care ajung la oamenii potriviți, la momentul potrivit.
+      </p>
+      <div class="skills-grid">
+        <div class="skill-item"><span class="skill-dot"></span>Google Ads (Search & Display)</div>
+        <div class="skill-item"><span class="skill-dot"></span>Meta Ads (Facebook & Instagram)</div>
+        <div class="skill-item"><span class="skill-dot"></span>DV360 / Google Marketing Platform</div>
+        <div class="skill-item"><span class="skill-dot"></span>YouTube Advertising</div>
+        <div class="skill-item"><span class="skill-dot"></span>Google Analytics 4</div>
+        <div class="skill-item"><span class="skill-dot"></span>Strategie & Planificare Media</div>
+        <div class="skill-item"><span class="skill-dot"></span>A/B Testing & Optimizare</div>
+        <div class="skill-item"><span class="skill-dot"></span>Raportare & Data Studio</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICII -->
+<section id="servicii">
+  <div class="servicii-header">
+    <div>
+      <div class="section-label">Ce ofer</div>
+      <h2 class="section-title">Servicii specializate<br>în paid media.</h2>
+    </div>
+  </div>
+  <div class="servicii-grid">
+    <div class="serviciu-card reveal">
+      <div class="serviciu-num">01</div>
+      <div class="serviciu-title">Google Ads Management</div>
+      <p class="serviciu-desc">Campanii Search, Display și Shopping construite strategic, cu optimizare continuă pentru a maximiza ROI-ul la fiecare leu investit.</p>
+    </div>
+    <div class="serviciu-card reveal">
+      <div class="serviciu-num">02</div>
+      <div class="serviciu-title">Meta Ads (Facebook & Instagram)</div>
+      <p class="serviciu-desc">Campanii de prospectare și retargeting, testate riguros la nivel de audiență, format și mesaj pentru scalare predictibilă.</p>
+    </div>
+    <div class="serviciu-card reveal">
+      <div class="serviciu-num">03</div>
+      <div class="serviciu-title">YouTube & Video Advertising</div>
+      <p class="serviciu-desc">Strategii de video advertising pentru brand awareness și conversii, cu focus pe segmentare avansată și optimizare CPV.</p>
+    </div>
+    <div class="serviciu-card reveal">
+      <div class="serviciu-num">04</div>
+      <div class="serviciu-title">DV360 & Programmatic</div>
+      <p class="serviciu-desc">Acces la inventar premium prin Google Display & Video 360, cu targeting avansat și brand safety pentru campanii la scară.</p>
+    </div>
+    <div class="serviciu-card reveal">
+      <div class="serviciu-num">05</div>
+      <div class="serviciu-title">Audit & Strategie Media</div>
+      <p class="serviciu-desc">Analiză detaliată a conturilor existente, identificarea pierderilor de buget și construirea unui plan de media clar și acționabil.</p>
+    </div>
+    <div class="serviciu-card reveal">
+      <div class="serviciu-num">06</div>
+      <div class="serviciu-title">Raportare & Analytics</div>
+      <p class="serviciu-desc">Dashboard-uri personalizate în Looker Studio, rapoarte clare care arată ce funcționează și de ce — nu doar cifre.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PORTOFOLIU -->
+<section id="portofoliu">
+  <div class="section-label">Studii de caz</div>
+  <h2 class="section-title">Rezultate concrete,<br>nu promisiuni.</h2>
+  <div class="portofoliu-grid">
+    <div class="proiect-card reveal">
+      <div class="proiect-img">
+        <div class="proiect-img-bg" style="background: linear-gradient(135deg, #e8e4de 0%, #d4cfc8 100%);"></div>
+        <span class="proiect-tag">Google Ads</span>
+      </div>
+      <div class="proiect-content">
+        <p class="proiect-client">E-commerce — Fashion</p>
+        <h3 class="proiect-title">Scalare Shopping de la 5k la 45k € / lună</h3>
+        <p class="proiect-result">ROAS crescut de la <strong>2.1x la 6.4x</strong> în 4 luni prin restructurare completă a campaniilor și strategie de bidding automată.</p>
+      </div>
+    </div>
+    <div class="proiect-card reveal">
+      <div class="proiect-img">
+        <div class="proiect-img-bg" style="background: linear-gradient(135deg, #dde4e8 0%, #c8d4d8 100%);"></div>
+        <span class="proiect-tag">Meta Ads</span>
+      </div>
+      <div class="proiect-content">
+        <p class="proiect-client">SaaS — B2B</p>
+        <h3 class="proiect-title">Reducere CPL cu 68% pentru companie tech</h3>
+        <p class="proiect-result">Cost per lead scăzut de la <strong>€82 la €26</strong> prin testare sistematică de audiențe și mesaje pe funnel complet.</p>
+      </div>
+    </div>
+    <div class="proiect-card reveal">
+      <div class="proiect-img">
+        <div class="proiect-img-bg" style="background: linear-gradient(135deg, #e4e8de 0%, #d0d8c8 100%);"></div>
+        <span class="proiect-tag">YouTube Ads</span>
+      </div>
+      <div class="proiect-content">
+        <p class="proiect-client">FMCG — Lansare produs</p>
+        <h3 class="proiect-title">2.4M vizualizări organice post-campanie YouTube</h3>
+        <p class="proiect-result">Brand lift de <strong>+34 puncte procentuale</strong> în awareness și recall măsurat prin Google Brand Lift Study.</p>
+      </div>
+    </div>
+    <div class="proiect-card reveal">
+      <div class="proiect-img">
+        <div class="proiect-img-bg" style="background: linear-gradient(135deg, #e8dde4 0%, #d8c8d4 100%);"></div>
+        <span class="proiect-tag">DV360</span>
+      </div>
+      <div class="proiect-content">
+        <p class="proiect-client">Imobiliare — Premium</p>
+        <h3 class="proiect-title">Campanie programmatică pentru lansare rezidențială</h3>
+        <p class="proiect-result">Acoperire de <strong>1.2M utilizatori unici</strong> calificați în 6 săptămâni cu viewability rate de 78% pe site-uri premium.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALE -->
+<section id="testimoniale">
+  <div class="section-label">Ce spun clienții</div>
+  <h2 class="section-title">Relații de lungă<br><em>durată.</em></h2>
+  <div class="testimoniale-grid">
+    <div class="testimonial-card reveal">
+      <p class="testimonial-quote">„Am lucrat cu mai mulți specialiști în Google Ads, dar Alexandru este primul care a înțeles cu adevărat business-ul nostru și a construit campanii în consecință."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">MN</div>
+        <div>
+          <div class="author-name">Mihai Nedelcu</div>
+          <div class="author-role">CEO, RetailRo</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card reveal">
+      <p class="testimonial-quote">„Rezultatele din primele 3 luni au depășit tot ce obținusem în 2 ani cu alte agenții. Transparența și comunicarea sunt excepționale."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">AC</div>
+        <div>
+          <div class="author-name">Andreea Constantin</div>
+          <div class="author-role">Marketing Manager, TechStartup</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card reveal">
+      <p class="testimonial-quote">„Abordarea sa data-driven ne-a ajutat să înțelegem exact ce funcționează și ce nu. Nu mai cheltuim bani în gol."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">RP</div>
+        <div>
+          <div class="author-name">Radu Popescu</div>
+          <div class="author-role">Fondator, AgencyX</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section id="blog">
+  <div class="blog-header">
+    <div>
+      <div class="section-label">Resurse</div>
+      <h2 class="section-title">Articole despre<br>marketing digital.</h2>
+    </div>
+    <a href="#" class="blog-link-all">Toate articolele →</a>
+  </div>
+  <div class="blog-grid">
+    <div class="post-card reveal">
+      <div class="post-img">
+        <div class="post-img-inner" style="background: linear-gradient(135deg, #f0ede8 0%, #e4dfda 100%);"></div>
+      </div>
+      <div class="post-meta">
+        <span>Google Ads</span>
+        <span>8 min lectură</span>
+      </div>
+      <a href="#" class="post-title">Cum să structurezi campanii Performance Max pentru e-commerce în 2024</a>
+      <p class="post-excerpt">Ghid practic pentru maximizarea rezultatelor cu noul format de campanii Google, cu exemple reale din cont.</p>
+    </div>
+    <div class="post-card reveal">
+      <div class="post-img">
+        <div class="post-img-inner" style="background: linear-gradient(135deg, #e8ede8 0%, #dae4da 100%);"></div>
+      </div>
+      <div class="post-meta">
+        <span>Meta Ads</span>
+        <span>6 min lectură</span>
+      </div>
+      <a href="#" class="post-title">Strategia de testare a audiențelor Meta care mi-a redus CPL cu 50%</a>
+      <p class="post-excerpt">Metodologia pas cu pas pe care o aplic la fiecare cont nou pentru a găsi rapid audiențele profitabile.</p>
+    </div>
+    <div class="post-card reveal">
+      <div class="post-img">
+        <div class="post-img-inner" style="background: linear-gradient(135deg, #e8e8ed 0%, #dad ae4 100%);"></div>
+      </div>
+      <div class="post-meta">
+        <span>Strategie</span>
+        <span>5 min lectură</span>
+      </div>
+      <a href="#" class="post-title">De ce 80% din bugete de publicitate sunt risipite (și cum să eviți asta)</a>
+      <p class="post-excerpt">Cele mai frecvente greșeli pe care le văd în auditurile de conturi și cum să le corectezi rapid.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-label">Colaborare</div>
+  <h2 class="section-title">Să vorbim despre<br>proiectul tău.</h2>
+  <div class="contact-grid">
+    <div class="contact-info reveal">
+      <p class="contact-desc">Fie că ai un cont existent pe care vrei să-l optimizezi sau pornești de la zero — programează o discuție de 30 de minute fără niciun angajament.</p>
+      <div class="contact-item">
+        <span class="contact-label">Email</span>
+        <a href="mailto:hello@alexandruionescu.ro" class="contact-value">hello@alexandruionescu.ro</a>
+      </div>
+      <div class="contact-item">
+        <span class="contact-label">Telefon</span>
+        <a href="tel:+40700000000" class="contact-value">+40 700 000 000</a>
+      </div>
+      <div class="contact-item">
+        <span class="contact-label">LinkedIn</span>
+        <a href="#" class="contact-value">linkedin.com/in/alexandruionescu</a>
+      </div>
+      <div class="contact-item" style="border-bottom: none;">
+        <span class="contact-label">Disponibilitate</span>
+        <span class="contact-value">Proiecte noi — Disponibil</span>
+      </div>
+    </div>
+    <div class="contact-form reveal">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Prenume</label>
+          <input type="text" placeholder="Ion">
+        </div>
+        <div class="form-group">
+          <label>Companie</label>
+          <input type="text" placeholder="Firma SRL">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" placeholder="ion@firma.ro">
+      </div>
+      <div class="form-group">
+        <label>Serviciu de interes</label>
+        <select>
+          <option value="">Selectează...</option>
+          <option>Google Ads Management</option>
+          <option>Meta Ads Management</option>
+          <option>YouTube Advertising</option>
+          <option>DV360 / Programmatic</option>
+          <option>Audit & Strategie</option>
+          <option>Altceva</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Mesaj</label>
+        <textarea placeholder="Descrie pe scurt proiectul sau întrebarea ta..."></textarea>
+      </div>
+      <button type="button" class="form-submit">Trimite mesajul</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-logo">Alexandru Ionescu</div>
+    <ul class="footer-links">
+      <li><a href="#despre">Despre</a></li>
+      <li><a href="#servicii">Servicii</a></li>
+      <li><a href="#portofoliu">Portofoliu</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2024 Alexandru Ionescu. Toate drepturile rezervate.</span>
+    <span>Specialist Marketing Digital — Google Ads · Meta Ads · DV360</span>
+  </div>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('visible'), i * 80);
+    }
+  });
+}, { threshold: 0.1 });
+
+reveals.forEach(el => observer.observe(el));
+
+document.querySelector('.form-submit').addEventListener('click', function() {
+  this.textContent = 'Mesaj trimis ✓';
+  this.style.background = '#3a3a38';
+  setTimeout(() => {
+    this.textContent = 'Trimite mesajul';
+    this.style.background = '';
+  }, 3000);
+});
+</script>
+
+</body>
+</html>
