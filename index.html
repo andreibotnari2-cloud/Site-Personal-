@@ -3,85 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Andrei Botnari — Specialist Performance Marketing | Google Ads, Meta Ads Moldova</title>
-  <meta name="description" content="Specialist Performance Marketing cu 7+ ani experienta. Generez 30-40x ROAS prin Google Ads, Meta Ads si DV360. Disponibil pentru proiecte noi in Moldova.">
-  <meta name="keywords" content="performance marketing moldova, google ads chisinau, meta ads, facebook ads, specialist marketing digital, ROAS, campanii publicitare">
+  <title>Andrei Botnari — Senior Digital Marketing Specialist</title>
+  <meta name="description" content="Senior Digital Marketing Specialist cu peste 7 ani de experienta. Strategii de marketing digital, Google Ads, Meta Ads si crestere organica pentru afaceri ambitioase.">
+  <meta name="keywords" content="digital marketing specialist, google ads expert, meta ads, facebook ads, marketing consultant, strategie digitala">
   <meta name="author" content="Andrei Botnari">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://andreibotnari.md">
   
-  <!-- Open Graph -->
-  <meta property="og:title" content="Andrei Botnari — Specialist Performance Marketing">
-  <meta property="og:description" content="Generez 30-40x ROAS prin Google Ads si Meta Ads. 7+ ani experienta in performance marketing.">
+  <meta property="og:title" content="Andrei Botnari — Senior Digital Marketing Specialist">
+  <meta property="og:description" content="7+ ani de experienta in marketing digital. Strategii personalizate pentru crestere reala.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ro_MD">
-  <meta property="og:url" content="https://andreibotnari.md">
   
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Andrei Botnari — Specialist Performance Marketing">
-  <meta name="twitter:description" content="Generez 30-40x ROAS prin Google Ads si Meta Ads. 7+ ani experienta in performance marketing.">
+  <meta name="twitter:title" content="Andrei Botnari — Digital Marketing">
   
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   
-  <!-- Schema.org -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Andrei Botnari - Performance Marketing",
-    "description": "Specialist Performance Marketing cu 7+ ani experienta in Google Ads, Meta Ads si DV360",
+    "@type": "Person",
+    "name": "Andrei Botnari",
+    "jobTitle": "Senior Digital Marketing Specialist",
+    "description": "Senior Digital Marketing Specialist cu 7+ ani experienta",
     "url": "https://andreibotnari.md",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Chisinau",
-      "addressCountry": "MD"
-    },
-    "priceRange": "$$",
-    "areaServed": "Moldova",
-    "serviceType": ["Google Ads Management", "Meta Ads", "Performance Marketing", "DV360", "YouTube Advertising"]
+    "knowsAbout": ["Google Ads", "Meta Ads", "Digital Strategy", "Performance Marketing", "SEO"]
   }
   </script>
   
   <style>
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     
     :root {
-      --white: #ffffff;
-      --black: #000000;
-      --gray-50: #fafafa;
-      --gray-100: #f5f5f5;
-      --gray-200: #e5e5e5;
-      --gray-300: #d4d4d4;
-      --gray-400: #a3a3a3;
-      --gray-500: #737373;
-      --gray-600: #525252;
-      --gray-700: #404040;
-      --gray-800: #262626;
-      --gray-900: #171717;
+      --bg: #ffffff;
+      --bg-alt: #fafafa;
+      --text: #171717;
+      --text-secondary: #525252;
+      --text-muted: #a3a3a3;
+      --border: #e5e5e5;
+      --border-light: #f5f5f5;
     }
     
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
     
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      background: var(--white);
-      color: var(--gray-600);
+      background: var(--bg);
+      color: var(--text-secondary);
       font-size: 16px;
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
     }
     
-    /* Container */
+    ::selection {
+      background: var(--text);
+      color: var(--bg);
+    }
+    
+    /* Layout */
     .container {
       width: 100%;
       max-width: 1200px;
@@ -93,16 +75,21 @@
       .container { padding: 0 48px; }
     }
     
+    @media (min-width: 1200px) {
+      .container { padding: 0 24px; }
+    }
+    
     /* Header */
     header {
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
-      z-index: 100;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--gray-100);
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-light);
     }
     
     .header-inner {
@@ -113,58 +100,54 @@
     }
     
     .logo {
-      font-size: 1.125rem;
-      font-weight: 600;
-      color: var(--black);
+      font-size: 0.9375rem;
+      font-weight: 500;
+      color: var(--text);
       text-decoration: none;
-      letter-spacing: -0.02em;
+      letter-spacing: -0.01em;
     }
     
-    .nav-links {
+    .logo span {
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+    
+    nav {
       display: none;
       align-items: center;
       gap: 40px;
-      list-style: none;
     }
     
     @media (min-width: 768px) {
-      .nav-links { display: flex; }
+      nav { display: flex; }
     }
     
-    .nav-links a {
+    nav a {
       font-size: 0.875rem;
-      font-weight: 500;
-      color: var(--gray-500);
+      color: var(--text-secondary);
       text-decoration: none;
       transition: color 0.2s;
     }
     
-    .nav-links a:hover {
-      color: var(--black);
+    nav a:hover {
+      color: var(--text);
     }
     
     .nav-cta {
-      display: none;
       padding: 10px 20px;
-      background: var(--black);
-      color: var(--white);
-      font-size: 0.875rem;
+      background: var(--text);
+      color: var(--bg) !important;
+      border-radius: 6px;
       font-weight: 500;
-      text-decoration: none;
-      border-radius: 8px;
-      transition: background 0.2s;
-    }
-    
-    @media (min-width: 768px) {
-      .nav-cta { display: inline-block; }
+      transition: opacity 0.2s;
     }
     
     .nav-cta:hover {
-      background: var(--gray-800);
+      opacity: 0.85;
     }
     
     /* Mobile Menu */
-    .menu-btn {
+    .menu-toggle {
       display: flex;
       flex-direction: column;
       gap: 5px;
@@ -175,176 +158,160 @@
     }
     
     @media (min-width: 768px) {
-      .menu-btn { display: none; }
+      .menu-toggle { display: none; }
     }
     
-    .menu-btn span {
+    .menu-toggle span {
       width: 20px;
-      height: 2px;
-      background: var(--black);
-      border-radius: 1px;
-      transition: all 0.3s;
+      height: 1.5px;
+      background: var(--text);
+      transition: 0.3s;
     }
     
-    .mobile-nav {
+    .mobile-menu {
       display: none;
       position: fixed;
-      top: 72px;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: var(--white);
-      z-index: 99;
-      padding: 48px 24px;
+      inset: 72px 0 0 0;
+      background: var(--bg);
+      padding: 32px 24px;
+      z-index: 999;
     }
     
-    .mobile-nav.open { display: block; }
+    .mobile-menu.open { display: block; }
     
-    .mobile-nav a {
+    .mobile-menu a {
       display: block;
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: var(--black);
+      font-size: 1.125rem;
+      color: var(--text);
       text-decoration: none;
       padding: 16px 0;
-      border-bottom: 1px solid var(--gray-100);
+      border-bottom: 1px solid var(--border-light);
     }
     
     /* Hero */
     .hero {
-      padding: 160px 0 120px;
       min-height: 100vh;
       display: flex;
       align-items: center;
+      padding: 120px 0 80px;
     }
     
     @media (min-width: 768px) {
-      .hero { padding: 180px 0 140px; }
+      .hero { padding: 140px 0 100px; }
     }
     
     .hero-content {
       max-width: 720px;
     }
     
-    .hero-badge {
+    .hero-eyebrow {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 8px 16px;
-      background: var(--gray-50);
-      border: 1px solid var(--gray-200);
-      border-radius: 100px;
       font-size: 0.8125rem;
-      font-weight: 500;
-      color: var(--gray-600);
+      color: var(--text-muted);
       margin-bottom: 32px;
+      letter-spacing: 0.02em;
     }
     
-    .badge-dot {
-      width: 8px;
-      height: 8px;
-      background: #10b981;
+    .hero-eyebrow::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: #22c55e;
       border-radius: 50%;
-      animation: pulse 2s infinite;
-    }
-    
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.5; }
     }
     
     .hero h1 {
       font-size: clamp(2.5rem, 6vw, 4rem);
-      font-weight: 700;
+      font-weight: 500;
       line-height: 1.1;
       letter-spacing: -0.03em;
-      color: var(--black);
-      margin-bottom: 24px;
+      color: var(--text);
+      margin-bottom: 28px;
     }
     
     .hero-text {
       font-size: 1.125rem;
-      line-height: 1.8;
-      color: var(--gray-500);
+      line-height: 1.75;
+      color: var(--text-secondary);
       margin-bottom: 40px;
       max-width: 540px;
     }
     
-    .hero-text strong {
-      color: var(--black);
-      font-weight: 600;
-    }
-    
-    .hero-buttons {
+    .hero-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-bottom: 64px;
+      margin-bottom: 80px;
     }
     
     .btn {
       display: inline-flex;
       align-items: center;
-      justify-content: center;
+      gap: 8px;
       padding: 14px 28px;
       font-size: 0.9375rem;
       font-weight: 500;
       text-decoration: none;
-      border-radius: 8px;
+      border-radius: 6px;
       transition: all 0.2s;
       border: none;
       cursor: pointer;
+      font-family: inherit;
     }
     
     .btn-primary {
-      background: var(--black);
-      color: var(--white);
+      background: var(--text);
+      color: var(--bg);
     }
     
     .btn-primary:hover {
-      background: var(--gray-800);
+      opacity: 0.85;
     }
     
-    .btn-secondary {
-      background: var(--white);
-      color: var(--black);
-      border: 1px solid var(--gray-200);
+    .btn-ghost {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
     }
     
-    .btn-secondary:hover {
-      background: var(--gray-50);
-      border-color: var(--gray-300);
+    .btn-ghost:hover {
+      background: var(--bg-alt);
     }
     
-    .hero-stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
-      padding-top: 48px;
-      border-top: 1px solid var(--gray-100);
+    .hero-metrics {
+      display: flex;
+      gap: 48px;
     }
     
     @media (max-width: 480px) {
-      .hero-stats { grid-template-columns: 1fr; gap: 24px; }
+      .hero-metrics {
+        flex-direction: column;
+        gap: 24px;
+      }
     }
     
-    .stat h3 {
+    .metric {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .metric-value {
       font-size: 2rem;
-      font-weight: 700;
-      color: var(--black);
-      letter-spacing: -0.02em;
-      margin-bottom: 4px;
+      font-weight: 600;
+      color: var(--text);
+      letter-spacing: -0.03em;
+      line-height: 1;
     }
     
-    .stat p {
+    .metric-label {
       font-size: 0.8125rem;
-      color: var(--gray-400);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      font-weight: 500;
+      color: var(--text-muted);
+      margin-top: 6px;
     }
     
-    /* Sections */
+    /* Section */
     section {
       padding: 120px 0;
     }
@@ -353,269 +320,235 @@
       section { padding: 160px 0; }
     }
     
-    .section-header {
-      margin-bottom: 64px;
-    }
-    
-    .section-header.center {
-      text-align: center;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    
     .section-label {
-      display: inline-block;
       font-size: 0.75rem;
-      font-weight: 600;
+      font-weight: 500;
       text-transform: uppercase;
       letter-spacing: 0.1em;
-      color: var(--gray-400);
+      color: var(--text-muted);
       margin-bottom: 16px;
     }
     
     .section-title {
       font-size: clamp(1.75rem, 4vw, 2.5rem);
-      font-weight: 700;
+      font-weight: 500;
       line-height: 1.2;
       letter-spacing: -0.02em;
-      color: var(--black);
+      color: var(--text);
       margin-bottom: 16px;
     }
     
-    .section-text {
+    .section-desc {
       font-size: 1.0625rem;
       line-height: 1.7;
-      color: var(--gray-500);
+      color: var(--text-secondary);
+      max-width: 560px;
     }
     
-    /* Rezultate */
-    #rezultate {
-      background: var(--gray-50);
+    .section-header {
+      margin-bottom: 64px;
     }
     
-    .rezultate-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 20px;
-    }
-    
-    @media (min-width: 768px) {
-      .rezultate-grid { grid-template-columns: repeat(3, 1fr); }
-    }
-    
-    .rezultat-card {
-      background: var(--white);
-      border: 1px solid var(--gray-200);
-      border-radius: 16px;
-      padding: 40px 32px;
-      transition: all 0.3s;
-    }
-    
-    .rezultat-card:hover {
-      border-color: var(--gray-300);
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
-    }
-    
-    .rezultat-num {
-      font-size: 3rem;
-      font-weight: 700;
-      color: var(--black);
-      letter-spacing: -0.03em;
-      line-height: 1;
-      margin-bottom: 12px;
-    }
-    
-    .rezultat-text {
-      font-size: 0.9375rem;
-      line-height: 1.7;
-      color: var(--gray-500);
-      margin-bottom: 24px;
-    }
-    
-    .rezultat-tag {
-      display: inline-block;
-      padding: 6px 14px;
-      background: var(--gray-100);
-      border-radius: 6px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: var(--gray-600);
-    }
-    
-    /* Despre */
+    /* About */
     #despre {
-      background: var(--white);
+      background: var(--bg);
     }
     
-    .despre-grid {
+    .about-grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 64px;
-      align-items: center;
     }
     
     @media (min-width: 900px) {
-      .despre-grid { grid-template-columns: 1fr 1.2fr; }
+      .about-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: start;
+      }
     }
     
-    .despre-image {
-      aspect-ratio: 4/5;
-      border-radius: 16px;
-      overflow: hidden;
-      background: var(--gray-100);
-    }
-    
-    .despre-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    
-    .despre-bio {
+    .about-text p {
       font-size: 1.0625rem;
       line-height: 1.8;
-      color: var(--gray-600);
+      color: var(--text-secondary);
       margin-bottom: 20px;
     }
     
-    .despre-bio strong {
-      color: var(--black);
-      font-weight: 600;
+    .about-text strong {
+      color: var(--text);
+      font-weight: 500;
     }
     
-    .tools {
+    .about-quote {
+      border-left: 2px solid var(--text);
+      padding-left: 24px;
+      margin: 40px 0;
+    }
+    
+    .about-quote p {
+      font-size: 1.125rem;
+      font-style: italic;
+      color: var(--text);
+      line-height: 1.7;
+    }
+    
+    .expertise-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
       margin-top: 40px;
     }
     
-    .tools-label {
-      font-size: 0.75rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--gray-400);
-      margin-bottom: 16px;
+    .expertise-tag {
+      padding: 8px 16px;
+      background: var(--bg-alt);
+      border-radius: 100px;
+      font-size: 0.8125rem;
+      color: var(--text-secondary);
     }
     
-    .tools-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    
-    .tool {
-      padding: 10px 18px;
-      background: var(--gray-50);
-      border: 1px solid var(--gray-200);
-      border-radius: 8px;
-      font-size: 0.875rem;
-      font-weight: 500;
-      color: var(--gray-700);
-    }
-    
-    /* Servicii */
+    /* Services */
     #servicii {
-      background: var(--gray-50);
+      background: var(--bg-alt);
     }
     
-    .servicii-list {
-      display: flex;
-      flex-direction: column;
-    }
-    
-    .serviciu {
+    .services-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 12px;
-      padding: 32px 0;
-      border-bottom: 1px solid var(--gray-200);
-      cursor: pointer;
-      transition: all 0.2s;
+      gap: 16px;
     }
     
     @media (min-width: 768px) {
-      .serviciu {
-        grid-template-columns: 48px 1fr auto;
-        align-items: center;
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    
+    .service-card {
+      background: var(--bg);
+      border-radius: 12px;
+      padding: 36px 32px;
+      border: 1px solid var(--border-light);
+      transition: all 0.3s;
+    }
+    
+    .service-card:hover {
+      border-color: var(--border);
+      transform: translateY(-2px);
+    }
+    
+    .service-number {
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+    
+    .service-title {
+      font-size: 1.125rem;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+    }
+    
+    .service-desc {
+      font-size: 0.9375rem;
+      line-height: 1.7;
+      color: var(--text-secondary);
+    }
+    
+    /* Results */
+    #rezultate {
+      background: var(--text);
+    }
+    
+    #rezultate .section-label { color: #737373; }
+    #rezultate .section-title { color: var(--bg); }
+    #rezultate .section-desc { color: #a3a3a3; }
+    
+    .results-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    
+    @media (min-width: 768px) {
+      .results-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    
+    .result-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 12px;
+      padding: 40px 32px;
+    }
+    
+    .result-value {
+      font-size: 3rem;
+      font-weight: 600;
+      color: var(--bg);
+      letter-spacing: -0.04em;
+      line-height: 1;
+    }
+    
+    .result-label {
+      font-size: 0.9375rem;
+      color: #a3a3a3;
+      margin-top: 12px;
+    }
+    
+    .result-context {
+      font-size: 0.8125rem;
+      color: #737373;
+      margin-top: 8px;
+      line-height: 1.5;
+    }
+    
+    /* Process */
+    #proces {
+      background: var(--bg);
+    }
+    
+    .process-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+    
+    @media (min-width: 768px) {
+      .process-grid {
+        grid-template-columns: repeat(4, 1fr);
         gap: 32px;
       }
     }
     
-    .serviciu:first-child { border-top: 1px solid var(--gray-200); }
+    .process-step {}
     
-    .serviciu:hover { padding-left: 12px; }
-    
-    .serviciu-num {
-      font-size: 0.875rem;
+    .process-number {
+      font-size: 3rem;
       font-weight: 600;
-      color: var(--gray-300);
+      color: var(--border);
+      line-height: 1;
+      margin-bottom: 16px;
+      letter-spacing: -0.03em;
     }
     
-    .serviciu-content {}
-    
-    .serviciu-name {
-      font-size: 1.125rem;
-      font-weight: 600;
-      color: var(--black);
-      margin-bottom: 6px;
-    }
-    
-    .serviciu-desc {
-      font-size: 0.9375rem;
-      line-height: 1.6;
-      color: var(--gray-500);
-    }
-    
-    .serviciu-arrow {
-      font-size: 1.25rem;
-      color: var(--gray-300);
-      opacity: 0;
-      transform: translateX(-8px);
-      transition: all 0.2s;
-    }
-    
-    .serviciu:hover .serviciu-arrow {
-      opacity: 1;
-      transform: translateX(0);
-      color: var(--black);
-    }
-    
-    /* Clienti */
-    #clienti {
-      background: var(--black);
-    }
-    
-    #clienti .section-label { color: var(--gray-500); }
-    #clienti .section-title { color: var(--white); }
-    #clienti .section-text { color: var(--gray-400); }
-    
-    .clienti-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 16px 24px;
-      margin-top: 48px;
-    }
-    
-    .client {
-      padding: 12px 24px;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 8px;
-      font-size: 0.9375rem;
+    .process-title {
+      font-size: 1rem;
       font-weight: 500;
-      color: var(--gray-400);
-      transition: all 0.2s;
+      color: var(--text);
+      margin-bottom: 8px;
     }
     
-    .client:hover {
-      background: rgba(255, 255, 255, 0.1);
-      color: var(--white);
+    .process-desc {
+      font-size: 0.875rem;
+      line-height: 1.65;
+      color: var(--text-secondary);
     }
     
     /* Contact */
     #contact {
-      background: var(--white);
+      background: var(--bg-alt);
     }
     
     .contact-grid {
@@ -628,79 +561,83 @@
       .contact-grid { grid-template-columns: 1fr 1fr; }
     }
     
+    .contact-info {}
+    
     .contact-title {
-      font-size: clamp(1.75rem, 4vw, 2.5rem);
-      font-weight: 700;
+      font-size: clamp(1.75rem, 4vw, 2.25rem);
+      font-weight: 500;
       line-height: 1.2;
       letter-spacing: -0.02em;
-      color: var(--black);
+      color: var(--text);
       margin-bottom: 16px;
     }
     
     .contact-text {
       font-size: 1.0625rem;
       line-height: 1.7;
-      color: var(--gray-500);
-      margin-bottom: 40px;
+      color: var(--text-secondary);
+      margin-bottom: 48px;
     }
     
-    .contact-list {
-      margin-bottom: 32px;
-    }
+    .contact-list {}
     
-    .contact-row {
+    .contact-item {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 20px 0;
-      border-bottom: 1px solid var(--gray-100);
+      border-top: 1px solid var(--border);
     }
     
-    .contact-row:first-child { border-top: 1px solid var(--gray-100); }
+    .contact-item:last-child {
+      border-bottom: 1px solid var(--border);
+    }
     
     .contact-label {
       font-size: 0.75rem;
-      font-weight: 600;
+      font-weight: 500;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--gray-400);
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
     }
     
     .contact-value {
       font-size: 0.9375rem;
-      font-weight: 500;
-      color: var(--black);
+      color: var(--text);
       text-decoration: none;
     }
     
-    .contact-value:hover { color: var(--gray-600); }
+    .contact-value:hover {
+      text-decoration: underline;
+    }
     
-    .contact-status {
+    .availability {
       display: inline-flex;
       align-items: center;
       gap: 8px;
+      margin-top: 40px;
       font-size: 0.875rem;
-      font-weight: 500;
-      color: #10b981;
+      color: #16a34a;
     }
     
-    .status-dot {
-      width: 8px;
-      height: 8px;
-      background: #10b981;
+    .availability::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: #22c55e;
       border-radius: 50%;
-      animation: pulse 2s infinite;
     }
     
     /* Form */
     .contact-form {
-      background: var(--gray-50);
+      background: var(--bg);
       border-radius: 16px;
       padding: 40px;
+      border: 1px solid var(--border-light);
     }
     
     @media (max-width: 480px) {
-      .contact-form { padding: 24px; }
+      .contact-form { padding: 28px 24px; }
     }
     
     .form-row {
@@ -714,42 +651,43 @@
       .form-row { grid-template-columns: 1fr 1fr; }
     }
     
-    .form-group { margin-bottom: 16px; }
+    .form-group {
+      margin-bottom: 16px;
+    }
     
     .form-label {
       display: block;
-      font-size: 0.75rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--gray-500);
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: var(--text-secondary);
       margin-bottom: 8px;
     }
     
     .form-input,
-    .form-select,
-    .form-textarea {
+    .form-textarea,
+    .form-select {
       width: 100%;
       padding: 14px 16px;
-      background: var(--white);
-      border: 1px solid var(--gray-200);
+      background: var(--bg-alt);
+      border: 1px solid transparent;
       border-radius: 8px;
       font-family: inherit;
       font-size: 0.9375rem;
-      color: var(--black);
-      transition: border-color 0.2s;
+      color: var(--text);
+      transition: all 0.2s;
     }
     
     .form-input:focus,
-    .form-select:focus,
-    .form-textarea:focus {
+    .form-textarea:focus,
+    .form-select:focus {
       outline: none;
-      border-color: var(--black);
+      background: var(--bg);
+      border-color: var(--text);
     }
     
     .form-input::placeholder,
     .form-textarea::placeholder {
-      color: var(--gray-400);
+      color: var(--text-muted);
     }
     
     .form-textarea {
@@ -759,39 +697,43 @@
     
     .form-select {
       appearance: none;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23737373' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10l-5 5z'/%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23a3a3a3' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10l-5 5z'/%3E%3C/svg%3E");
       background-repeat: no-repeat;
       background-position: right 16px center;
+      cursor: pointer;
     }
     
     .form-submit {
       width: 100%;
       padding: 16px 32px;
-      background: var(--black);
-      color: var(--white);
+      background: var(--text);
+      color: var(--bg);
       font-family: inherit;
       font-size: 0.9375rem;
-      font-weight: 600;
+      font-weight: 500;
       border: none;
       border-radius: 8px;
       cursor: pointer;
-      transition: background 0.2s;
+      transition: opacity 0.2s;
       margin-top: 8px;
     }
     
-    .form-submit:hover { background: var(--gray-800); }
+    .form-submit:hover {
+      opacity: 0.85;
+    }
     
     /* Footer */
     footer {
-      padding: 32px 0;
-      border-top: 1px solid var(--gray-100);
+      padding: 48px 0;
+      background: var(--bg);
+      border-top: 1px solid var(--border-light);
     }
     
     .footer-inner {
       display: flex;
       flex-direction: column;
+      gap: 24px;
       align-items: center;
-      gap: 12px;
       text-align: center;
     }
     
@@ -805,19 +747,34 @@
     
     .footer-logo {
       font-size: 0.9375rem;
-      font-weight: 600;
-      color: var(--black);
+      font-weight: 500;
+      color: var(--text);
     }
     
     .footer-copy {
       font-size: 0.8125rem;
-      color: var(--gray-400);
+      color: var(--text-muted);
+    }
+    
+    .footer-links {
+      display: flex;
+      gap: 24px;
+    }
+    
+    .footer-links a {
+      font-size: 0.8125rem;
+      color: var(--text-secondary);
+      text-decoration: none;
+    }
+    
+    .footer-links a:hover {
+      color: var(--text);
     }
     
     /* Animations */
     .fade-in {
       opacity: 0;
-      transform: translateY(24px);
+      transform: translateY(20px);
       transition: opacity 0.6s ease, transform 0.6s ease;
     }
     
@@ -828,308 +785,368 @@
   </style>
 </head>
 <body>
-
-<header>
-  <div class="container">
-    <div class="header-inner">
-      <a href="#" class="logo">Andrei Botnari</a>
-      <ul class="nav-links">
-        <li><a href="#rezultate">Rezultate</a></li>
-        <li><a href="#despre">Despre</a></li>
-        <li><a href="#servicii">Servicii</a></li>
-        <li><a href="#clienti">Clienti</a></li>
-      </ul>
-      <a href="#contact" class="nav-cta">Contact</a>
-      <button class="menu-btn" onclick="toggleMenu()" aria-label="Meniu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+  
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="logo">Andrei Botnari <span>/ Marketing</span></a>
+        
+        <nav>
+          <a href="#despre">Despre</a>
+          <a href="#servicii">Servicii</a>
+          <a href="#rezultate">Rezultate</a>
+          <a href="blog.html">Blog</a>
+          <a href="#contact" class="nav-cta">Contact</a>
+        </nav>
+        
+        <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menu">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
+  </header>
+  
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#despre" onclick="toggleMenu()">Despre</a>
+    <a href="#servicii" onclick="toggleMenu()">Servicii</a>
+    <a href="#rezultate" onclick="toggleMenu()">Rezultate</a>
+    <a href="blog.html" onclick="toggleMenu()">Blog</a>
+    <a href="#contact" onclick="toggleMenu()">Contact</a>
   </div>
-</header>
-
-<nav class="mobile-nav" id="mobileNav">
-  <a href="#rezultate" onclick="toggleMenu()">Rezultate</a>
-  <a href="#despre" onclick="toggleMenu()">Despre</a>
-  <a href="#servicii" onclick="toggleMenu()">Servicii</a>
-  <a href="#clienti" onclick="toggleMenu()">Clienti</a>
-  <a href="#contact" onclick="toggleMenu()">Contact</a>
-</nav>
-
-<main>
-  <section class="hero">
-    <div class="container">
-      <div class="hero-content">
-        <div class="hero-badge">
-          <span class="badge-dot"></span>
-          Disponibil pentru proiecte noi
-        </div>
-        <h1>Performance Marketing care genereaza vanzari</h1>
-        <p class="hero-text">
-          Construiesc campanii Google Ads si Meta Ads cu <strong>30-40x ROAS</strong>. 
-          Fiecare leu investit se intoarce inmultit — masurabil, predictibil, scalabil.
-        </p>
-        <div class="hero-buttons">
-          <a href="#contact" class="btn btn-primary">Programeaza o discutie</a>
-          <a href="#rezultate" class="btn btn-secondary">Vezi rezultatele</a>
-        </div>
-        <div class="hero-stats">
-          <div class="stat">
-            <h3>7+</h3>
-            <p>Ani experienta</p>
-          </div>
-          <div class="stat">
-            <h3>20+</h3>
-            <p>Clienti activi</p>
-          </div>
-          <div class="stat">
-            <h3>40k</h3>
-            <p>Vanzari / luna</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="rezultate">
-    <div class="container">
-      <div class="section-header center fade-in">
-        <span class="section-label">Cifre reale</span>
-        <h2 class="section-title">Rezultate masurabile</h2>
-        <p class="section-text">Nu promit — livrez. Cifrele din conturile pe care le gestionez vorbesc de la sine.</p>
-      </div>
-      <div class="rezultate-grid">
-        <article class="rezultat-card fade-in">
-          <div class="rezultat-num">30-40x</div>
-          <p class="rezultat-text">Return on Ad Spend mediu. La fiecare $1.000 investiti, generez $30.000-40.000 in vanzari.</p>
-          <span class="rezultat-tag">Google Ads</span>
-        </article>
-        <article class="rezultat-card fade-in">
-          <div class="rezultat-num">$1.000</div>
-          <p class="rezultat-text">Budget lunar recomandat pentru rezultate consistente. Eficienta maxima, risipa zero.</p>
-          <span class="rezultat-tag">Meta Ads</span>
-        </article>
-        <article class="rezultat-card fade-in">
-          <div class="rezultat-num">7 ani</div>
-          <p class="rezultat-text">De experienta in performance marketing. Sute de campanii optimizate, pe multiple platforme.</p>
-          <span class="rezultat-tag">DV360</span>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="despre">
-    <div class="container">
-      <div class="despre-grid">
-        <div class="despre-image fade-in">
-          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=750&fit=crop&crop=face" 
-               alt="Andrei Botnari - Specialist Performance Marketing" 
-               loading="lazy"
-               width="600" 
-               height="750">
-        </div>
-        <div class="fade-in">
-          <span class="section-label">Despre mine</span>
-          <h2 class="section-title">Specialist in performance marketing</h2>
-          <p class="despre-bio">
-            Lucrez cu branduri din Moldova si nu numai — de la restaurante si agentii de turism, 
-            pana la companii de constructii si retail.
+  
+  <main>
+    
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <p class="hero-eyebrow">Disponibil pentru proiecte noi</p>
+          
+          <h1>Strategii de marketing digital care genereaza crestere reala</h1>
+          
+          <p class="hero-text">
+            Senior Digital Marketing Specialist cu peste 7 ani de experienta. 
+            Ajut afaceri sa creasca prin strategii de performance marketing, 
+            campanii platite si crestere organica.
           </p>
-          <p class="despre-bio">
-            <strong>Fiecare leu investit in ads trebuie sa se intoarca inmultit.</strong> 
-            Nu vand servicii — vand rezultate. Construiesc campanii care genereaza vanzari reale, 
-            masurabile, cu o eficienta pe care cifrele o confirma lunar.
+          
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">Hai sa discutam</a>
+            <a href="#servicii" class="btn btn-ghost">Vezi serviciile</a>
+          </div>
+          
+          <div class="hero-metrics">
+            <div class="metric">
+              <span class="metric-value">7+</span>
+              <span class="metric-label">Ani experienta</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value">50+</span>
+              <span class="metric-label">Proiecte livrate</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value">3M+</span>
+              <span class="metric-label">Buget gestionat</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Despre -->
+    <section id="despre">
+      <div class="container">
+        <div class="about-grid">
+          <div>
+            <span class="section-label">Despre mine</span>
+            <h2 class="section-title">Marketing cu focus pe rezultate, nu pe vanity metrics</h2>
+          </div>
+          
+          <div class="about-text">
+            <p>
+              In ultimii <strong>7 ani</strong>, am lucrat cu zeci de afaceri din diverse industrii, 
+              de la startup-uri la companii consacrate. Am gestionat bugete de milioane de lei in 
+              campanii de Google Ads, Meta Ads si alte canale de achizitie.
+            </p>
+            
+            <p>
+              Experienta mea include atat <strong>strategie</strong> cat si <strong>executie</strong>. 
+              Inteleg ce functioneaza in practica pentru ca am testat, optimizat si scalat campanii 
+              in piete competitive.
+            </p>
+            
+            <div class="about-quote">
+              <p>
+                "Cred in abordarea directa si transparenta totala. 
+                Fiecare leu investit trebuie sa aduca valoare masurabila."
+              </p>
+            </div>
+            
+            <p>
+              Lucrand direct cu mine, beneficiezi de aceeasi expertiza pe care o ofera 
+              o agentie de top, dar cu comunicare directa, flexibilitate si atentie 
+              personalizata la fiecare detaliu al campaniilor tale.
+            </p>
+            
+            <div class="expertise-list">
+              <span class="expertise-tag">Google Ads</span>
+              <span class="expertise-tag">Meta Ads</span>
+              <span class="expertise-tag">Performance Marketing</span>
+              <span class="expertise-tag">Marketing Strategy</span>
+              <span class="expertise-tag">Analytics</span>
+              <span class="expertise-tag">CRO</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Servicii -->
+    <section id="servicii">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Servicii</span>
+          <h2 class="section-title">Cum te pot ajuta</h2>
+          <p class="section-desc">
+            Servicii complete de marketing digital, de la strategie la implementare si optimizare continua.
           </p>
-          <div class="tools">
-            <p class="tools-label">Platforme si instrumente</p>
-            <div class="tools-grid">
-              <span class="tool">Google Ads</span>
-              <span class="tool">Meta Ads</span>
-              <span class="tool">DV360</span>
-              <span class="tool">YouTube Ads</span>
-              <span class="tool">GA4</span>
-              <span class="tool">Looker Studio</span>
-            </div>
+        </div>
+        
+        <div class="services-grid">
+          <article class="service-card fade-in">
+            <span class="service-number">01</span>
+            <h3 class="service-title">Google Ads Management</h3>
+            <p class="service-desc">
+              Campanii Search, Display, YouTube si Performance Max optimizate pentru 
+              conversii si ROI maxim. Audit, setup si management continuu.
+            </p>
+          </article>
+          
+          <article class="service-card fade-in">
+            <span class="service-number">02</span>
+            <h3 class="service-title">Meta Ads (Facebook & Instagram)</h3>
+            <p class="service-desc">
+              Strategii complete pentru Facebook si Instagram Ads. De la awareness 
+              la conversii, cu creative testing si optimizare de audienta.
+            </p>
+          </article>
+          
+          <article class="service-card fade-in">
+            <span class="service-number">03</span>
+            <h3 class="service-title">Strategie de Marketing Digital</h3>
+            <p class="service-desc">
+              Analiza competitiva, definirea publicului tinta, stabilirea KPI-urilor 
+              si crearea unui plan de actiune pentru crestere sustenabila.
+            </p>
+          </article>
+          
+          <article class="service-card fade-in">
+            <span class="service-number">04</span>
+            <h3 class="service-title">Analytics si Tracking</h3>
+            <p class="service-desc">
+              Setup GA4, Google Tag Manager, conversii tracking si dashboards 
+              personalizate pentru decizii bazate pe date reale.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Rezultate -->
+    <section id="rezultate">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Rezultate</span>
+          <h2 class="section-title">Numere din campaniile gestionate</h2>
+          <p class="section-desc">
+            Rezultate reale din proiecte diversificate in ecommerce, servicii si B2B.
+          </p>
+        </div>
+        
+        <div class="results-grid">
+          <article class="result-card fade-in">
+            <span class="result-value">340%</span>
+            <p class="result-label">Crestere ROAS medie</p>
+            <p class="result-context">Pentru clienti ecommerce in primele 6 luni</p>
+          </article>
+          
+          <article class="result-card fade-in">
+            <span class="result-value">-45%</span>
+            <p class="result-label">Reducere cost per lead</p>
+            <p class="result-context">Prin optimizare continua si A/B testing</p>
+          </article>
+          
+          <article class="result-card fade-in">
+            <span class="result-value">2.8x</span>
+            <p class="result-label">Crestere venituri</p>
+            <p class="result-context">Media pe campaniile gestionate peste 12 luni</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Proces -->
+    <section id="proces">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Proces</span>
+          <h2 class="section-title">Cum lucrez</h2>
+          <p class="section-desc">
+            O abordare structurata care asigura rezultate consistente.
+          </p>
+        </div>
+        
+        <div class="process-grid">
+          <div class="process-step fade-in">
+            <span class="process-number">01</span>
+            <h3 class="process-title">Analiza</h3>
+            <p class="process-desc">
+              Audit complet al prezentei digitale, analiza competitiei si identificarea oportunitatilor.
+            </p>
+          </div>
+          
+          <div class="process-step fade-in">
+            <span class="process-number">02</span>
+            <h3 class="process-title">Strategie</h3>
+            <p class="process-desc">
+              Plan detaliat cu obiective clare, KPI-uri si roadmap de implementare.
+            </p>
+          </div>
+          
+          <div class="process-step fade-in">
+            <span class="process-number">03</span>
+            <h3 class="process-title">Executie</h3>
+            <p class="process-desc">
+              Implementare profesionala cu atentie la fiecare detaliu si best practices.
+            </p>
+          </div>
+          
+          <div class="process-step fade-in">
+            <span class="process-number">04</span>
+            <h3 class="process-title">Optimizare</h3>
+            <p class="process-desc">
+              Monitorizare continua, testing si imbunatatiri bazate pe date.
+            </p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section id="servicii">
-    <div class="container">
-      <div class="section-header fade-in">
-        <span class="section-label">Ce ofer</span>
-        <h2 class="section-title">Servicii de performance marketing</h2>
-        <p class="section-text">Solutii complete pentru cresterea vanzarilor prin publicitate platita.</p>
-      </div>
-      <div class="servicii-list">
-        <article class="serviciu fade-in">
-          <span class="serviciu-num">01</span>
-          <div class="serviciu-content">
-            <h3 class="serviciu-name">Google Ads Management</h3>
-            <p class="serviciu-desc">Search, Display, Shopping si Performance Max. Structurare, optimizare continua si raportare clara.</p>
-          </div>
-          <span class="serviciu-arrow">&#8594;</span>
-        </article>
-        <article class="serviciu fade-in">
-          <span class="serviciu-num">02</span>
-          <div class="serviciu-content">
-            <h3 class="serviciu-name">Meta Ads (Facebook si Instagram)</h3>
-            <p class="serviciu-desc">Campanii de prospectare, retargeting si lookalike audiences. Testing sistematic pentru scalare.</p>
-          </div>
-          <span class="serviciu-arrow">&#8594;</span>
-        </article>
-        <article class="serviciu fade-in">
-          <span class="serviciu-num">03</span>
-          <div class="serviciu-content">
-            <h3 class="serviciu-name">DV360 si Programmatic Display</h3>
-            <p class="serviciu-desc">Acces la inventar premium prin Google Marketing Platform. Brand safety si targeting avansat.</p>
-          </div>
-          <span class="serviciu-arrow">&#8594;</span>
-        </article>
-        <article class="serviciu fade-in">
-          <span class="serviciu-num">04</span>
-          <div class="serviciu-content">
-            <h3 class="serviciu-name">YouTube Advertising</h3>
-            <p class="serviciu-desc">Campanii video pentru awareness si conversii. Segmentare avansata si optimizare CPV.</p>
-          </div>
-          <span class="serviciu-arrow">&#8594;</span>
-        </article>
-        <article class="serviciu fade-in">
-          <span class="serviciu-num">05</span>
-          <div class="serviciu-content">
-            <h3 class="serviciu-name">Audit si Strategie Media</h3>
-            <p class="serviciu-desc">Analiza completa a conturilor existente si plan concret de actiune cu prioritati clare.</p>
-          </div>
-          <span class="serviciu-arrow">&#8594;</span>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="clienti">
-    <div class="container">
-      <div class="section-header center fade-in">
-        <span class="section-label">Portofoliu</span>
-        <h2 class="section-title">Branduri cu care am lucrat</h2>
-        <p class="section-text">De la restaurante locale pana la agentii de turism si companii de constructii.</p>
-      </div>
-      <div class="clienti-grid fade-in">
-        <span class="client">Pastry Shop</span>
-        <span class="client">Imperlux</span>
-        <span class="client">Conluxart</span>
-        <span class="client">Corso Pizza</span>
-        <span class="client">Samurai Sushi</span>
-        <span class="client">Stilis Home</span>
-        <span class="client">Bradus</span>
-        <span class="client">Gustar Festival</span>
-        <span class="client">Relocare.md</span>
-        <span class="client">GAL Trans</span>
-        <span class="client">A1</span>
-        <span class="client">Sublime</span>
-        <span class="client">InvestTur</span>
-        <span class="client">International Tour</span>
-        <span class="client">Keramo Rosso</span>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="container">
-      <div class="contact-grid">
-        <div class="fade-in">
-          <h2 class="contact-title">Hai sa discutam despre obiectivele tale</h2>
-          <p class="contact-text">30 de minute gratuite — iti spun exact ce se poate imbunatati in campaniile tale si cum poti obtine mai mult din acelasi buget.</p>
-          <div class="contact-list">
-            <div class="contact-row">
-              <span class="contact-label">Email</span>
-              <a href="mailto:andrei@botnari.md" class="contact-value">andrei@botnari.md</a>
+    </section>
+    
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h2 class="contact-title">Hai sa discutam despre proiectul tau</h2>
+            <p class="contact-text">
+              Fie ca ai nevoie de o strategie completa sau de optimizarea campaniilor existente, 
+              sunt aici sa ajut. Completeaza formularul sau contacteaza-ma direct.
+            </p>
+            
+            <div class="contact-list">
+              <div class="contact-item">
+                <span class="contact-label">Email</span>
+                <a href="mailto:contact@andreibotnari.md" class="contact-value">contact@andreibotnari.md</a>
+              </div>
+              <div class="contact-item">
+                <span class="contact-label">Telefon</span>
+                <a href="tel:+37360000000" class="contact-value">+373 60 000 000</a>
+              </div>
+              <div class="contact-item">
+                <span class="contact-label">Locatie</span>
+                <span class="contact-value">Chisinau, Moldova</span>
+              </div>
             </div>
-            <div class="contact-row">
-              <span class="contact-label">Telefon</span>
-              <a href="tel:+37300000000" class="contact-value">+373 00 000 000</a>
-            </div>
-            <div class="contact-row">
-              <span class="contact-label">LinkedIn</span>
-              <a href="#" class="contact-value">Andrei Botnari</a>
-            </div>
+            
+            <p class="availability">Disponibil pentru proiecte noi</p>
           </div>
-          <div class="contact-status">
-            <span class="status-dot"></span>
-            Disponibil pentru proiecte noi
-          </div>
+          
+          <form class="contact-form" action="#" method="POST">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="name">Nume</label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="Numele tau" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="email">Email</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="email@exemplu.com" required>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label class="form-label" for="service">Serviciu de interes</label>
+              <select id="service" name="service" class="form-select">
+                <option value="">Selecteaza un serviciu</option>
+                <option value="google-ads">Google Ads Management</option>
+                <option value="meta-ads">Meta Ads (Facebook & Instagram)</option>
+                <option value="strategy">Strategie de Marketing</option>
+                <option value="analytics">Analytics si Tracking</option>
+                <option value="other">Altceva</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label class="form-label" for="message">Mesaj</label>
+              <textarea id="message" name="message" class="form-textarea" placeholder="Spune-mi mai multe despre proiectul tau..."></textarea>
+            </div>
+            
+            <button type="submit" class="form-submit">Trimite mesajul</button>
+          </form>
         </div>
-        <form class="contact-form fade-in" onsubmit="submitForm(event)">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="prenume" class="form-label">Prenume</label>
-              <input type="text" id="prenume" name="prenume" class="form-input" placeholder="Ion" required>
-            </div>
-            <div class="form-group">
-              <label for="companie" class="form-label">Companie</label>
-              <input type="text" id="companie" name="companie" class="form-input" placeholder="Firma SRL">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" id="email" name="email" class="form-input" placeholder="ion@firma.md" required>
-          </div>
-          <div class="form-group">
-            <label for="buget" class="form-label">Buget lunar ads</label>
-            <select id="buget" name="buget" class="form-select">
-              <option value="">Selecteaza...</option>
-              <option value="sub500">Sub $500</option>
-              <option value="500-1000">$500 - $1.000</option>
-              <option value="1000-3000">$1.000 - $3.000</option>
-              <option value="3000-10000">$3.000 - $10.000</option>
-              <option value="peste10000">Peste $10.000</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="mesaj" class="form-label">Mesaj</label>
-            <textarea id="mesaj" name="mesaj" class="form-textarea" placeholder="Descrie pe scurt business-ul si obiectivele tale..."></textarea>
-          </div>
-          <button type="submit" class="form-submit">Trimite mesajul</button>
-        </form>
+      </div>
+    </section>
+    
+  </main>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-logo">Andrei Botnari</span>
+        <span class="footer-copy">2024 Toate drepturile rezervate</span>
+        <div class="footer-links">
+          <a href="#">LinkedIn</a>
+          <a href="#">Instagram</a>
+        </div>
       </div>
     </div>
-  </section>
-</main>
-
-<footer>
-  <div class="container">
-    <div class="footer-inner">
-      <span class="footer-logo">Andrei Botnari</span>
-      <span class="footer-copy">2024 Performance Marketing Chisinau, Moldova</span>
-    </div>
-  </div>
-</footer>
-
-<script>
-function toggleMenu() {
-  document.getElementById('mobileNav').classList.toggle('open');
-}
-
-function submitForm(e) {
-  e.preventDefault();
-  const btn = e.target.querySelector('button');
-  btn.textContent = 'Mesaj trimis!';
-  btn.style.background = '#10b981';
-}
-
-// Fade in animation
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
+  </footer>
+  
+  <script>
+    // Mobile menu toggle
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
     }
-  });
-}, { threshold: 0.1 });
-
-document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-</script>
-
+    
+    // Fade in on scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+    
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+  
 </body>
 </html>
