@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Andrei Botnari — Performance Marketing</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Neue+Montreal:wght@300;400;500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -17,12 +18,12 @@
   --gray-600:#6b6b65;
   --gray-800:#2a2a28;
   --accent:#0a0a0a;
-  --font-display:"Instrument Serif",Georgia,serif;
-  --font-body:"DM Sans",system-ui,sans-serif;
+  --font-display:"Playfair Display",Georgia,serif;
+  --font-body:"Inter",system-ui,sans-serif;
   --ease-out:cubic-bezier(0.16,1,0.3,1);
 }
 html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
-body{font-family:var(--font-body);background:var(--white);color:var(--gray-800);font-size:16px;line-height:1.6;overflow-x:hidden}
+body{font-family:var(--font-body);background:var(--white);color:var(--gray-800);font-size:16px;line-height:1.7;overflow-x:hidden;font-weight:400;letter-spacing:-0.01em}
 
 /* NAV */
 nav{
@@ -35,9 +36,9 @@ nav{
   border-bottom:1px solid rgba(0,0,0,0.06);
   transition:all 0.3s;
 }
-.nav-logo{font-family:var(--font-display);font-size:1.15rem;color:var(--black);text-decoration:none;letter-spacing:-0.01em}
+.nav-logo{font-family:var(--font-display);font-size:1.25rem;color:var(--black);text-decoration:none;letter-spacing:-0.02em;font-weight:500}
 .nav-links{display:flex;gap:2rem;list-style:none}
-.nav-links a{text-decoration:none;color:var(--gray-600);font-size:0.82rem;letter-spacing:0.01em;font-weight:400;transition:color 0.2s}
+.nav-links a{text-decoration:none;color:var(--gray-600);font-size:0.85rem;letter-spacing:-0.01em;font-weight:500;transition:color 0.2s}
 .nav-links a:hover{color:var(--black)}
 .nav-cta{
   background:var(--black)!important;color:var(--white)!important;
@@ -71,24 +72,24 @@ nav{
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
 .hero h1{
   font-family:var(--font-display);
-  font-size:clamp(3.2rem,5.5vw,6rem);
-  font-weight:400;line-height:1.0;
+  font-size:clamp(3.2rem,5.5vw,5.5rem);
+  font-weight:500;line-height:1.05;
   color:var(--black);
-  letter-spacing:-0.03em;
+  letter-spacing:-0.02em;
   margin-bottom:2rem;
 }
-.hero h1 em{font-style:italic;color:var(--gray-400)}
+.hero h1 em{font-style:italic;color:var(--gray-400);font-weight:400}
 .hero-desc{
-  font-size:1.05rem;color:var(--gray-600);
-  max-width:420px;line-height:1.75;margin-bottom:3rem;
-  font-weight:300;
+  font-size:1.1rem;color:var(--gray-600);
+  max-width:440px;line-height:1.8;margin-bottom:3rem;
+  font-weight:400;
 }
 .hero-desc strong{color:var(--black);font-weight:500}
 .hero-actions{display:flex;gap:0.8rem;flex-wrap:wrap}
 .btn-pill{
-  padding:0.75rem 1.8rem;border-radius:980px;
-  font-size:0.85rem;font-weight:400;text-decoration:none;
-  transition:all 0.2s var(--ease-out);letter-spacing:0.01em;
+  padding:0.8rem 2rem;border-radius:980px;
+  font-size:0.9rem;font-weight:500;text-decoration:none;
+  transition:all 0.2s var(--ease-out);letter-spacing:-0.01em;
 }
 .btn-dark{background:var(--black);color:var(--white)}
 .btn-dark:hover{opacity:0.8;transform:scale(0.98)}
@@ -122,11 +123,11 @@ nav{
 .stat-item{flex:1;padding-right:2rem}
 .stat-item:not(:last-child){border-right:1px solid var(--gray-200);margin-right:2rem}
 .stat-num{
-  font-family:var(--font-display);font-size:2.4rem;
-  font-weight:400;color:var(--black);line-height:1;
+  font-family:var(--font-display);font-size:2.6rem;
+  font-weight:500;color:var(--black);line-height:1;
   letter-spacing:-0.02em;
 }
-.stat-label{font-size:0.75rem;color:var(--gray-400);margin-top:0.3rem;letter-spacing:0.03em}
+.stat-label{font-size:0.8rem;color:var(--gray-400);margin-top:0.4rem;letter-spacing:0.02em;font-weight:500}
 
 /* SECTIONS */
 section{padding:8rem 6vw}
@@ -139,11 +140,11 @@ section{padding:8rem 6vw}
 .section-label::before{content:"";width:20px;height:1px;background:var(--gray-400)}
 .section-title{
   font-family:var(--font-display);
-  font-size:clamp(2.2rem,4vw,3.8rem);
-  font-weight:400;color:var(--black);
-  line-height:1.08;letter-spacing:-0.025em;
+  font-size:clamp(2.4rem,4vw,3.8rem);
+  font-weight:500;color:var(--black);
+  line-height:1.1;letter-spacing:-0.02em;
 }
-.section-title em{font-style:italic;color:var(--gray-400)}
+.section-title em{font-style:italic;color:var(--gray-400);font-weight:400}
 
 /* REZULTATE / PROOF */
 #rezultate{background:var(--black);color:var(--white);padding:7rem 6vw}
@@ -163,11 +164,11 @@ section{padding:8rem 6vw}
 .rezultat-card:hover{background:#111}
 .rezultat-num{
   font-family:var(--font-display);
-  font-size:3.5rem;font-weight:400;
+  font-size:3.5rem;font-weight:500;
   color:var(--white);line-height:1;
-  letter-spacing:-0.03em;margin-bottom:0.5rem;
+  letter-spacing:-0.02em;margin-bottom:0.6rem;
 }
-.rezultat-desc{font-size:0.85rem;color:rgba(255,255,255,0.45);line-height:1.6;margin-bottom:1.5rem}
+.rezultat-desc{font-size:0.9rem;color:rgba(255,255,255,0.5);line-height:1.7;margin-bottom:1.5rem;font-weight:400}
 .rezultat-platform{
   display:inline-block;font-size:0.7rem;letter-spacing:0.08em;text-transform:uppercase;
   color:rgba(255,255,255,0.3);border:1px solid rgba(255,255,255,0.1);
@@ -192,7 +193,7 @@ section{padding:8rem 6vw}
   color:var(--gray-600);
 }
 .despre-content{padding-top:1rem}
-.despre-bio{font-size:1.1rem;line-height:1.85;color:var(--gray-600);margin-bottom:1.8rem;font-weight:300}
+.despre-bio{font-size:1.1rem;line-height:1.85;color:var(--gray-600);margin-bottom:1.8rem;font-weight:400}
 .despre-bio strong{color:var(--black);font-weight:500}
 .tools-grid{
   display:grid;grid-template-columns:1fr 1fr;gap:1px;
@@ -230,10 +231,10 @@ section{padding:8rem 6vw}
 }
 .serviciu-body{}
 .serviciu-name{
-  font-size:1.15rem;font-weight:500;color:var(--black);
-  margin-bottom:0.5rem;letter-spacing:-0.01em;
+  font-size:1.2rem;font-weight:600;color:var(--black);
+  margin-bottom:0.5rem;letter-spacing:-0.02em;
 }
-.serviciu-desc{font-size:0.85rem;color:var(--gray-400);line-height:1.6}
+.serviciu-desc{font-size:0.9rem;color:var(--gray-400);line-height:1.7;font-weight:400}
 .serviciu-meta{
   display:flex;flex-direction:column;align-items:flex-end;gap:0.4rem;
   padding-top:0.2rem;
@@ -266,12 +267,12 @@ section{padding:8rem 6vw}
 .contact-headline{
   font-family:var(--font-display);
   font-size:clamp(2.5rem,4vw,4rem);
-  font-weight:400;color:var(--black);
-  line-height:1.05;letter-spacing:-0.025em;
+  font-weight:500;color:var(--black);
+  line-height:1.1;letter-spacing:-0.02em;
   margin-bottom:2rem;
 }
-.contact-headline em{font-style:italic;color:var(--gray-400)}
-.contact-desc{font-size:0.95rem;color:var(--gray-600);line-height:1.75;font-weight:300;margin-bottom:3rem}
+.contact-headline em{font-style:italic;color:var(--gray-400);font-weight:400}
+.contact-desc{font-size:1rem;color:var(--gray-600);line-height:1.8;font-weight:400;margin-bottom:3rem}
 .contact-links{display:flex;flex-direction:column;gap:0}
 .contact-link-row{
   display:flex;justify-content:space-between;align-items:center;
@@ -320,8 +321,8 @@ footer{
   display:flex;justify-content:space-between;align-items:center;
   border-top:1px solid var(--gray-200);
 }
-.footer-logo{font-family:var(--font-display);font-size:1rem;color:var(--black)}
-.footer-copy{font-size:0.75rem;color:var(--gray-400)}
+.footer-logo{font-family:var(--font-display);font-size:1.1rem;color:var(--black);font-weight:500}
+.footer-copy{font-size:0.8rem;color:var(--gray-400);font-weight:400}
 
 /* REVEAL ANIMATIONS */
 .reveal{opacity:0;transform:translateY(30px);transition:opacity 0.8s var(--ease-out),transform 0.8s var(--ease-out)}
